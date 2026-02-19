@@ -1,0 +1,82 @@
+
+MODULE 5
+From Products to Outcomes:
+GE and the Industrial Internet of Things
+Lecture Script with Blackboard Cues
+Estimated delivery time: 18–22 minutes
+
+
+Part 1: The Biggest Bet in Industrial History
+[Estimated time: 4–5 minutes]
+Over the last three modules, we’ve built a toolkit: business model elements, disruption theory, platform economics, merchant models. Today we’re going to watch these concepts collide in one of the most ambitious—and instructive—business model transformations ever attempted.
+In 2011, GE’s CEO Jeff Immelt made a declaration that shocked the industrial world. He said GE would become a top-ten software company by 2020. This was a company that made jet engines, gas turbines, MRI machines, and locomotives. And Immelt was saying it would compete with Oracle and SAP.
+BOARD: GE: “We will be a top-10 software company by 2020” — Jeff Immelt, 2011
+Why? Because Immelt saw something that most industrial companies were ignoring. Every jet engine GE sold was generating terabytes of sensor data—temperature, pressure, vibration, fuel flow—and almost all of it was being thrown away. If GE could capture that data, analyze it, and turn it into actionable insights, the value would dwarf the hardware itself.
+BOARD: 1 jet engine = 5,000+ sensors → Terabytes of data per flight → Mostly UNUSED
+Think about what that means. A GE jet engine costs roughly thirty million dollars. But if GE could use data to predict when that engine would fail—and fix it before it broke—the value in avoided downtime, fuel savings, and extended lifespan could be worth far more than the engine itself over its lifetime.
+This insight led to a fundamental strategic question: Could GE shift from selling products to selling outcomes?
+BOARD: Strategic shift: Selling PRODUCTS → Selling OUTCOMES
+
+
+Part 2: Building Predix — GE’s Industrial Platform
+[Estimated time: 6–8 minutes]
+GE’s answer was Predix—an industrial Internet of Things platform designed to be the operating system for the industrial internet. The ambition was enormous.
+BOARD: Predix: Industrial IoT platform — “The operating system for industrial machines”
+Here’s how it was supposed to work. First, GE would instrument its own machines with sensors. Jet engines, turbines, locomotives would stream real-time data to the cloud. Second, Predix would provide the analytics layer—machine learning algorithms that could detect patterns, predict failures, and optimize performance. Third—and this was the platform play—GE would open Predix to other industrial companies, so that anyone could build applications on top of it.
+The Three-Horizon Strategy
+BOARD: Horizon 1: Optimize GE’s OWN operations (immediate)
+GE’s transformation followed what we might call a three-horizon approach. Horizon one was about optimizing GE’s own operations. Use data from its own machines to reduce maintenance costs, improve fuel efficiency, and minimize unplanned downtime. This was the easiest sell—clear ROI, internal control, no organizational complexity.
+BOARD: Horizon 2: Sell outcomes to CUSTOMERS (medium-term)
+Horizon two was about transforming GE’s customer relationships. Instead of selling a jet engine and walking away, GE would offer performance-based contracts. Pay-per-thrust-hour for airlines. Guaranteed uptime for power plants. The customer pays for the outcome—reliable power, safe flights—not the physical machine. GE captures more value over the life of the asset, and the customer gets predictable costs and reduced risk.
+BOARD: Horizon 3: Build an OPEN PLATFORM for all industrial companies (long-term)
+Horizon three was the most ambitious—building Predix into an open platform that would become the default infrastructure for the entire industrial internet. If Predix succeeded, every manufacturer, utility, and transportation company in the world would run their IoT applications on GE’s platform. GE would be the Amazon Web Services of the physical world.
+BOARD: The aspiration: GE = AWS of the physical world
+
+
+Part 3: The Unraveling
+[Estimated time: 5–6 minutes]
+So what happened? GE invested over seven billion dollars in its digital transformation. It hired thousands of software engineers. It built a dedicated digital division, GE Digital, headquartered in San Ramon, California—deliberately far from GE’s industrial heartland in Boston.
+And yet, by 2018, the initiative was widely considered a failure. Immelt was replaced. GE Digital was downsized. Predix was repositioned from an open platform to a focused tool for GE’s own operations. What went wrong?
+BOARD: $7+ billion invested → By 2018, initiative largely failed. WHY?
+Lesson 1: Culture Clash
+BOARD: Lesson 1: Industrial culture ≠ Software culture
+First, culture. GE’s DNA was engineering perfectionism. You don’t ship a jet engine with bugs—people die. Software development requires a fundamentally different mindset: ship fast, iterate, tolerate imperfection, fail cheaply and learn. GE tried to build a Silicon Valley culture inside an organization whose instincts were exactly opposite.
+The engineers from both worlds couldn’t understand each other. GE’s industrial engineers wanted rigorous specifications and waterfall development. The software engineers wanted agile sprints and minimum viable products. The cultural friction was intense and never fully resolved.
+Lesson 2: Customer Readiness
+BOARD: Lesson 2: Customers weren’t ready to buy outcomes
+Second, customer readiness. GE assumed that industrial customers—airlines, utilities, oil companies—would eagerly adopt outcome-based contracts. Many didn’t. Why? Because outcome-based pricing transfers risk from the customer to GE. Airlines were comfortable buying engines and managing maintenance themselves. They had decades of expertise in this. They didn’t necessarily want to hand that control—and the associated data—to their equipment supplier.
+Lesson 3: Platform Economics Don’t Translate Automatically
+BOARD: Lesson 3: Platform economics work differently in B2B industrial contexts
+Third, the platform economics that work beautifully in consumer markets don’t automatically translate to industrial contexts. Consumer platforms benefit from massive user numbers and relatively low switching costs. Industrial platforms serve dozens or hundreds of customers, not millions. Each deployment is complex and customized. The network effects that make Uber or Airbnb so powerful are much weaker when your “users” are twenty airlines with highly specific requirements.
+Lesson 4: Organizational Cannibalization
+BOARD: Lesson 4: Selling outcomes cannibalizes selling products
+Fourth—and this connects directly to Module 1—cannibalization. If GE sells guaranteed uptime instead of spare parts, what happens to the spare parts business? If GE’s predictive maintenance means engines need fewer overhauls, GE’s highly profitable aftermarket services revenue declines. The new business model directly undermined the economics of the existing one. And internally, the people running the existing businesses fought hard to protect their revenue.
+
+
+Part 4: Lessons for Digital Transformation
+[Estimated time: 3–4 minutes]
+GE’s experience isn’t a simple failure story. Some elements worked. GE’s internal use of IoT analytics did generate real savings—Horizon 1 largely succeeded. The concept of outcome-based services is sound and other companies have made it work in more focused implementations. The failure was primarily in Horizon 3—the ambition to build an open industrial platform.
+BOARD: What worked: Focused IoT for own operations (Horizon 1)
+BOARD: What failed: Open platform ambition (Horizon 3)
+So what are the transferable lessons?
+BOARD: Lesson A: Start narrow, prove value, THEN expand
+First, start narrow. GE tried to boil the ocean—building a platform for all industries simultaneously. The companies that have succeeded with industrial IoT—Siemens with MindSphere, Rockwell with FactoryTalk—started with deep expertise in specific verticals and expanded from a position of proven value.
+BOARD: Lesson B: Organizational separation must be REAL, not cosmetic
+Second, organizational separation must be genuine. GE created GE Digital as a separate unit, but it remained tied to GE’s sales cycles, approval processes, and compensation structures. Remember Christensen’s prescription from Module 2: the autonomous unit needs its own P&L, its own metrics, its own freedom to pursue markets the parent wouldn’t prioritize.
+BOARD: Lesson C: Transformation = Portfolio of bets, not a single moonshot
+Third, transformation should be a portfolio of bets, not a single moonshot. GE put everything into Predix as the unifying platform. A more resilient approach is to run multiple experiments across different business models—some outcome-based contracts, some data-as-a-service offerings, some focused analytics tools—and double down on what gains traction.
+
+
+Part 5: Synthesis and Your Challenge
+[Estimated time: 2–3 minutes]
+Over these five modules, we’ve built a comprehensive framework. You now understand the four elements of a business model and how they interlock. You understand why disruption is structurally difficult for incumbents to respond to. You understand the economics of platforms and merchants. And you’ve seen, through GE’s experience, how all of these forces interact in a real transformation attempt.
+BOARD: The four modules: Business Model Elements → Disruption → Platforms → Merchants → Transformation
+Here’s my final challenge to you. Take everything we’ve covered. Now apply it to your own organization or to an industry you care deeply about. Ask yourself four questions.
+BOARD: 1. What OUTCOMES do your customers actually want? (Not what products you sell)
+BOARD: 2. Where is the DISRUPTION entry point in your industry?
+BOARD: 3. Should you BUILD a platform, JOIN one, or stay a merchant?
+BOARD: 4. What organizational CHANGES would transformation require?
+These aren’t abstract questions. They’re the questions that will define which companies thrive and which companies become the next Blockbuster, the next Kodak, the next cautionary tale.
+The tools are in your hands now. The question is what you’ll build with them.
+[Hold the pause. Let it land.]
+Thank you for your attention across all five modules. I look forward to your analysis.

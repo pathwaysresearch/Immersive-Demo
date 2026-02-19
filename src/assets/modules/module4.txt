@@ -1,0 +1,72 @@
+
+MODULE 4
+The Merchant Model:
+Owning the Value Chain Digitally
+Lecture Script with Blackboard Cues
+Estimated delivery time: 18–22 minutes
+
+
+Part 1: Not Everything Is a Platform
+[Estimated time: 4–5 minutes]
+In the last module, we explored platform business models—how companies like Uber, Airbnb, and Amazon Marketplace create value by facilitating interactions between groups. Today I want to challenge a common assumption: that every successful digital company is a platform.
+It’s not true. Some of the most powerful digital companies in the world operate as merchants—they buy or create products and sell them directly to consumers. They own inventory. They control the experience end-to-end. And they’re enormously successful.
+BOARD: Merchant Model: Buy (or create) → Curate → Sell directly to consumer
+Netflix is the clearest example. When Netflix streams a show it licensed or produced, it’s not connecting content creators with viewers in a marketplace. It’s a merchant. It bought or made that content, it decides what to offer, it sets the price, and it delivers it to subscribers. The customer’s relationship is with Netflix, not with the content creator.
+Amazon itself is a fascinating hybrid. When you buy something “sold by Amazon,” you’re interacting with a merchant. When you buy something from a third-party seller on Amazon, you’re using a platform. Same website, two fundamentally different business models running in parallel.
+BOARD: Amazon: Merchant (1P) + Platform (3P) — Hybrid model
+Understanding when to be a merchant and when to be a platform—and how to combine them—is one of the most important strategic decisions in digital business.
+
+
+Part 2: The Economics of Digital Merchants
+[Estimated time: 6–8 minutes]
+Let’s get into the economics, because this is where merchant models diverge sharply from platforms.
+Cost Structure
+BOARD: Merchant costs: Inventory / Content acquisition / Fulfillment / Customer service
+A merchant carries inventory risk. Netflix spends billions on content—over twenty billion dollars a year—before a single subscriber watches a single show. Amazon’s first-party business requires massive warehouses, logistics networks, and working capital tied up in inventory. These are real, tangible costs that platforms avoid.
+So why would anyone choose the merchant model? Because of what you get in return.
+Control and Experience
+BOARD: Merchant advantage: CONTROL over quality, pricing, branding, customer experience
+A merchant controls the entire customer experience. Netflix decides what shows to greenlight, how to sequence episodes, what the interface looks like, how recommendations are generated. Zara decides what fabrics to use, what styles to produce, how garments are displayed. This control creates consistency and quality that’s very difficult to achieve in a marketplace.
+Think about the difference between buying from Amazon directly versus from a random third-party seller. Amazon’s first-party products come with reliable delivery promises, easy returns, and consistent quality. Third-party products are variable. That consistency has economic value—customers pay a premium for it.
+Unit Economics
+BOARD: Merchant unit economics: Revenue − COGS − Fulfillment = Contribution margin
+The merchant’s fundamental metric is contribution margin per unit. How much revenue does each sale generate after deducting the cost of goods and fulfillment? This is straightforward accounting, but the digital twist is that some merchant businesses have marginal costs that approach zero.
+BOARD: Physical merchant: Marginal cost > 0 always / Digital merchant: Marginal cost ≈ 0
+Netflix’s marginal cost of one more subscriber watching one more show is essentially zero—the content is already produced, the servers are already running. This means that above a certain subscriber threshold, almost every additional rupee of revenue drops to the bottom line. The economics of a digital merchant with zero marginal cost look more like a platform than a traditional retailer.
+This is a crucial insight. The merchant-platform distinction isn’t always clean. A digital merchant with zero marginal cost and strong personalization can capture many of the economic advantages traditionally associated with platforms.
+
+
+Part 3: When Merchants Beat Platforms
+[Estimated time: 5–6 minutes]
+Given everything we said about the power of network effects, you might think platforms always win. They don’t. There are specific conditions where the merchant model is strategically superior.
+BOARD: Merchants win when: 1) Quality variance is HIGH
+First, when quality variance is high and quality matters. If you’re buying a standardized commodity—a USB cable, a book, a ride from point A to B—a marketplace works fine. But when quality is hard to assess and matters enormously—prescription drugs, financial advice, premium content—customers value the curation and quality assurance that a merchant provides.
+BOARD: 2) Trust is CRITICAL and hard to establish peer-to-peer
+Second, when trust is critical and difficult to establish through peer-to-peer mechanisms. Ratings and reviews work reasonably well for restaurants and hotels. They work poorly for medical devices, professional services, or situations where the cost of a bad transaction is very high.
+BOARD: 3) The experience IS the product (not just the transaction)
+Third, when the experience itself is the product. Apple Stores aren’t just distribution points—the in-store experience is a core part of Apple’s brand and value proposition. Netflix’s recommendation algorithm and interface design are inseparable from its content. In these cases, controlling the end-to-end experience creates value that a marketplace cannot replicate.
+The Subscription Revolution
+BOARD: Subscription: Recurring revenue + Predictability + Retention focus
+One of the most important developments in merchant models is the shift to subscriptions. Netflix, Spotify, Amazon Prime, Adobe Creative Cloud—these companies converted one-time purchases into recurring revenue streams. This changes the economics profoundly.
+With subscriptions, customer acquisition cost is amortized over the lifetime of the relationship. Revenue is predictable. And the entire organization orients around retention rather than individual transactions. The metric shifts from “did they buy today?” to “will they stay next month?”
+BOARD: Key metric shift: Conversion rate → Churn rate / LTV:CAC ratio
+This is why subscriber churn is the number Netflix obsesses over. A one-percent change in monthly churn, compounded over a year, has an enormous impact on revenue. And it’s why Netflix invests so heavily in content—not to attract new subscribers, but to prevent existing ones from leaving.
+
+
+Part 4: The Blurring of Boundaries
+[Estimated time: 3–4 minutes]
+In practice, the most successful digital companies don’t choose one model exclusively. They build hybrids.
+BOARD: Amazon: Retail merchant + Marketplace + AWS (infrastructure) + Advertising platform
+Amazon is perhaps the most sophisticated hybrid ever built. Its first-party retail business gives it direct customer relationships and data. Its marketplace platform gives it massive selection without inventory risk. AWS gives it a recurring infrastructure revenue stream. And its advertising business monetizes the attention of hundreds of millions of shoppers. Four business models, each reinforcing the others.
+Apple is another hybrid. It’s a product merchant—designing and selling hardware. It’s also a platform—the App Store connects developers with users. And it’s increasingly a subscription merchant—Apple Music, Apple TV+, iCloud storage.
+BOARD: Strategic question: Which parts of the value chain should you OWN vs. ORCHESTRATE?
+The strategic question for any digital business isn’t “should I be a platform or a merchant?” It’s “which parts of the value chain should I own and control, and which parts should I orchestrate as a platform?” The answer depends on where quality control matters most, where margins are highest, and where network effects can be generated.
+
+
+Part 5: Looking Ahead
+[Estimated time: 2–3 minutes]
+In the next module, we’re going to look at one of the most ambitious business model transformations in corporate history: GE’s attempt to shift from selling industrial equipment to selling outcomes—using the Internet of Things. It’s a story that combines everything we’ve discussed: business model innovation, platform thinking, merchant economics, and the organizational challenges of transformation.
+BOARD: For your business: What should you OWN? What should you ORCHESTRATE?
+But here’s your question for now. Think about your own business or industry. Where does quality variance hurt your customers the most? Where is trust hardest to establish? Where does the customer experience matter most? Those are the places where a merchant model—even in a platform-dominated world—creates irreplaceable value.
+[Hold the pause.]
+Thank you. I’ll see you in the next module.

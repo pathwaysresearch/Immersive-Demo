@@ -1,0 +1,72 @@
+SCENARIO SIMULATION CASE
+Anvaya Insurance: Building the Third Act
+A Banker Learns to Think Like an Insurer—Then Unlearns It
+Nagarro BFSI Practice  |  Interactive simulation  |  5 consequential decisions
+
+Your Mentor: Sasha Iyer
+Sasha Iyer spent twenty-two years in the American insurance industry doing things that sound boring at cocktail parties and turn out to be fascinating once you’re three drinks in. Actuary. Strategy lead. President of a specialty health insurer that tripled its policyholder base in four years.
+Born in Hyderabad, educated at Michigan and Ross, Sasha moved back to India last year after Nagarro made an irresistible offer: help build the next generation of transformation consultants. “I came back for the mission,” Sasha says. Then, after a pause: “Also the biryani. Michigan does many things well. Biryani is not one of them.”
+Sasha’s mentoring style is deceptively gentle. The questions sound casual. The silences that follow are not. On your first day together, Sasha said: “You know banking. That’s an asset and a trap. Banking teaches you to think about risk as something you price. Insurance teaches you to think about risk as something you live inside. We’re going to work on the difference.”
+
+
+You
+Your name is Meher Batra, and until three months ago you were entirely certain you understood financial services.
+Five years in banking will do that to you. After engineering at BITS Pilani, you joined a large private bank’s retail lending division in Mumbai. You built credit scorecards. You automated a loan origination pipeline that your VP still mentions at town halls. You sat through enough risk committee meetings to know that the phrase “let’s take this offline” means “I disagree but I’m hungry.” By year three, you were leading a six-person analytics team. By year four, you were restless.
+ISB happened the way ISB happens—a late-night application, a surprisingly honest essay about wanting problems bigger than quarterly NPA ratios, and eleven months in Hyderabad that taught you how much you didn’t know about strategy and business models. Your most humbling moment: a classmate from insurance casually explaining that banks think in quarters while insurers think in decades. You’d never considered that a business’s time horizon shapes everything about how it makes decisions.
+Nagarro recruited you into the BFSI practice straight out of ISB. The pitch: you’d bring domain depth in financial services and learn to be a transformation consultant. Your first major engagement is with an insurance company. You know BFSI. You do not know insurance. That gap is exactly what makes this interesting—and exactly what makes Sasha’s mentorship essential.
+
+
+Anvaya Insurance
+Anvaya General Insurance was founded in 1998 and has spent twenty-six years becoming one of India’s substantial players in health and motor insurance. The numbers tell a story of disciplined growth: 15 million active policies, 290 branches across 195 cities, 10,500 agents, bancassurance tie-ups with four major banks. Gross written premium last year: ₹12,600 crore.
+The company’s CEO is Preet Narayan. Preet has run Anvaya for thirteen years and has a reputation for doing uncomfortable things early—digitizing when peers were debating whether to digitize, investing in data science when the board still called it “IT spending.” Preet’s leadership style blends operational rigour with a restlessness that unsettles people who like things the way they are. In a recent interview, Preet said: “The most dangerous sentence in our industry is ‘We’ve always done it this way.’ The second most dangerous is ‘We’ll get to it next quarter.’”
+
+
+Three Eras of Anvaya
+Era I: The Product Factory (1998–2011)
+Anvaya’s first thirteen years were a textbook merchant model. Standardized products—motor, health, fire, liability—manufactured by actuaries and distributed through agents and bank partners. Revenue: fixed-price annual premiums. The profit formula was simple: keep claims ratios predictable, minimize per-policy cost, grow the agent force. Key resources: actuarial talent, regulatory licenses, agent networks. Key processes: underwriting, policy issuance, claims settlement. The customer bought a piece of paper and hoped never to use it.
+Era II: Product Plus Services (2012–2022)
+Under Preet, Anvaya layered digital services around the core product. Automated underwriting cut turnaround from two days to seven minutes. A claims app gave real-time updates. AI risk models added lifestyle, geographic, and wearable data to pricing. Value was no longer just the policy but the experience around it. NPS climbed from 31 to 56. Technology spend: ₹380 crore over the decade. Pricing shifted from cost-based to value-based.
+Then IRDAI’s “Use and File” regulations arrived. Suddenly, startups with no branches could design and ship products in weeks. A Pune startup offered on-demand health cover activated by scanning a QR code. A Delhi fintech embedded motor insurance into its electric vehicle subscription service. These entrants weren’t better at what Anvaya did. They redefined what “doing insurance” meant.
+Era III: The Platform Ambition (2023–Present)
+Preet’s new vision: transform Anvaya into a health and mobility ecosystem platform. Connect policyholders to e-pharmacies, telemedicine, fitness programs, chronic disease management, roadside assistance—all orchestrated by Anvaya. The logic: “Our health customers interact with us 2.1 times a year. Their fitness app interacts with them 700 times. We need to be in that daily flow, or we become a background utility that someone else controls.”
+The platform would generate revenue beyond premiums: partner referral fees, subscription wellness programs, data-driven personalized products, and modular micro-insurance for underserved segments. It promises richer data, continuous engagement, and access to customers—gig workers, young urban professionals, rural populations—whom Anvaya’s branch-and-agent model has never reached.
+
+
+The Dashboard on Preet’s Wall
+Metric
+Value
+Gross Written Premium (FY24)
+₹12,600 Cr
+Combined Ratio
+96.8%
+Health Retention Rate
+82%
+Avg. Customer Touchpoints / Year
+2.1
+Tech Investment (Last Decade)
+₹380 Cr
+NPS
+56
+Agent Network
+10,500
+Dividend Payout (Last 5 Yrs)
+Highest in company history
+P/E Ratio (5-Year Trend)
+Declined from 31x to 18x
+
+
+Your banking instincts see a healthy company. Combined ratio under 100 means underwriting profit. Retention at 82% is solid. Dividends are strong. But look at the last two rows together: record dividends and a collapsing P/E multiple. The market is paying Anvaya for what it earns today, not for what it could become. When Preet presented the platform vision at an analyst meet, the stock dipped 4.1%. One note read: “Anvaya’s core discipline is its moat. Platform ambitions dilute focus.”
+Preet sent it to the transformation team with one line: “This is the trap. If we listen to them, we optimize the present. If we ignore them, we can’t fund the future.”
+
+
+The Five Decisions Ahead
+Sasha will walk you through five strategic choices. Each one builds on the last. Each requires you to draw on frameworks you’ve learned and apply them to a domain that’s new to you. Your banking experience will help—and occasionally mislead you. That’s the point.
+Decision 1: What is the business model transformation across all three eras—and how does the revenue model shift at each stage?
+Decision 2: Why transform now, when the company is profitable and there is no crisis?
+Decision 3: What capabilities must Anvaya build for ecosystem play—and what should it partner for?
+Decision 4: How should AI reshape the way Anvaya organizes work?
+Decision 5: What structural forces will resist this transformation—and how does Anvaya navigate them?
+
+Sasha slides a coffee across the table and says: “Alright, Meher. You built credit scorecards for five years. You know how banks make money—they borrow short, lend long, and pray the spread holds. Now tell me: how does an insurer make money? Not the textbook answer. What’s the actual machine?”
+
+You take a sip. You realize you’re not entirely sure. That’s a good place to start.

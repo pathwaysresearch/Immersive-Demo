@@ -56,6 +56,66 @@
     letter-spacing: 0.01em;
 }
 
+/* Content Selection */
+.content-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    margin-top: -4px;
+}
+
+.selection-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.selection-group label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+.selection-group select {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: var(--text-primary);
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.selection-group select:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.selection-group select:focus {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+.selection-group select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.selection-group select option {
+    background: #111;
+    color: #fff;
+}
+
 /* Avatar section */
 .agent-avatar-section {
     display: flex;

@@ -1,0 +1,75 @@
+
+MODULE 2
+The Innovator’s Dilemma:
+Why Good Companies Fail at Disruption
+Lecture Script with Blackboard Cues
+Estimated delivery time: 18–22 minutes
+
+
+Part 1: The Puzzle of Rational Failure
+[Estimated time: 4–5 minutes]
+Let me start with a question that should bother you. Why do well-managed, customer-focused, profitable companies—companies that do everything right—still get blindsided by new entrants?
+[Pause. Let the question sit.]
+BOARD: Why do GOOD companies fail?
+This isn’t about lazy management or incompetence. The companies I’m talking about had talented leadership, listened carefully to their best customers, invested aggressively in R&D, and made rational resource allocation decisions. And yet they failed. Not despite doing everything right—but precisely because of it.
+Clayton Christensen spent decades studying this pattern, and his answer is one of the most important ideas in strategy. He called it the Innovator’s Dilemma.
+BOARD: Clayton Christensen — The Innovator’s Dilemma
+Let me give you the canonical example. In the 1970s and 80s, the disk drive industry was one of the most dynamic in technology. Companies like Seagate dominated the market for 14-inch drives used in mainframe computers. These were sophisticated products, and Seagate was very, very good at making them.
+Then along came 8-inch drives. Smaller, cheaper, but with lower capacity. Who wanted them? Not Seagate’s best customers—mainframe manufacturers who needed maximum storage. The 8-inch drives were useful for a new, smaller market: minicomputers. Seagate’s engineers actually built prototypes. But when they took them to their sales team, the sales team said: our customers don’t want these. And they were right—at that moment.
+BOARD: 14-inch → 8-inch → 5.25-inch → 3.5-inch drives
+So Seagate kept improving 14-inch drives for mainframes. Meanwhile, the 8-inch drive makers kept improving too—and eventually their drives were good enough for mainframes. Seagate was toast. And here’s the devastating part: the same pattern repeated. The 8-inch incumbents were disrupted by 5.25-inch drives for desktops, and those incumbents were disrupted by 3.5-inch drives for laptops. Every single time, the incumbents saw it coming, built prototypes, but rationally chose not to pursue the lower-margin market.
+
+
+Part 2: Sustaining vs. Disruptive Innovation
+[Estimated time: 6–8 minutes]
+So what exactly distinguishes an innovation that an incumbent can handle from one that kills them? Christensen drew a critical line.
+Sustaining Innovation
+BOARD: Sustaining Innovation — Better performance along EXISTING dimensions
+Sustaining innovations make good products better along the dimensions that existing customers already value. Faster processors, brighter screens, longer battery life. Incumbents are actually very good at sustaining innovation. They have the R&D budgets, the customer relationships, the distribution networks. In fact, incumbents win the sustaining innovation battle almost every time.
+Disruptive Innovation
+BOARD: Disruptive Innovation — Worse on traditional metrics, but NEW value dimensions
+Disruptive innovations are different. They typically start out worse on the metrics that mainstream customers care about. Lower capacity, lower performance, lower quality—by conventional measures. But they offer something new: they’re cheaper, simpler, more convenient, or more accessible.
+And here’s the critical mechanism. The disruptive product starts in a market that the incumbent doesn’t care about—either a low-end segment that’s unprofitable, or an entirely new market of non-consumers.
+BOARD: Two entry points: Low-end footholds OR New-market footholds
+Think about it from the incumbent’s perspective. Your best customers are telling you they want more performance. Your financial models show that the high-end market is where the margins are. Your entire organizational structure is optimized for serving demanding customers. Why would you divert resources to a low-margin product for customers you don’t have?
+BOARD: Asymmetric Motivation — Rational to ignore the threat
+This is what Christensen called asymmetric motivation. It’s not that the incumbent can’t see the disruption. It’s that they are rationally motivated to ignore it. Every incentive in the organization—compensation, promotions, resource allocation—points toward serving existing customers better, not chasing uncertain, low-margin markets.
+But technology improves. The disruptor keeps getting better. And eventually—and this is the key—the disruptive product becomes good enough for the mainstream market. Not necessarily the best on traditional metrics, but good enough. And it brings its other advantages: lower cost, greater simplicity, wider accessibility.
+BOARD: Performance trajectory: “Good enough” crosses into mainstream
+By the time the incumbent realizes the threat is real, the disruptor has years of learning, a loyal customer base, and a cost structure the incumbent can’t match.
+
+
+Part 3: Disruption Beyond Technology
+[Estimated time: 5–6 minutes]
+Now, people often misuse the word disruption. Every new startup claims to be disruptive. Every innovation gets called disruptive. But Christensen was precise about what disruption is—and what it isn’t.
+BOARD: Disruption ≠ any innovation that shakes up an industry
+Uber, for example. Is Uber disruptive? Christensen himself argued that Uber is not a classic disruptor—at least not in the traditional taxi market. Uber didn’t start with a worse product in a low-end market. From day one, Uber offered a better experience for mainstream customers: easier to hail, transparent pricing, rated drivers. That’s a sustaining innovation—a better product on dimensions customers already value.
+Where Uber might be disruptive is in car ownership. If ride-sharing becomes so cheap and convenient that people stop buying cars, that’s a new-market disruption to the auto industry. The entry point isn’t competing head-to-head; it’s making ownership unnecessary for a segment of consumers.
+BOARD: Netflix: Disruptive → Blockbuster (low-end) vs. Sustaining → HBO (head-to-head)
+Netflix is more interesting. Netflix’s initial DVD-by-mail service was a classic low-end disruption to Blockbuster. It was less convenient for impulse rentals—you had to wait for the mail—but it was cheaper, had a vastly larger selection, and eliminated late fees. It started with customers Blockbuster didn’t prioritize: movie enthusiasts who planned ahead.
+But Netflix’s pivot to original content—competing directly with HBO and traditional studios for premium content—is sustaining innovation. Better shows, bigger budgets, competing head-to-head on quality. Different strategic logic entirely.
+BOARD: Key test: Does the entrant start in a market the incumbent IGNORES?
+So the diagnostic question is straightforward: Does the entrant start in a market the incumbent rationally ignores? If yes, you have the conditions for disruption. If the entrant competes head-to-head from the start, that’s not disruption—it’s competition. Incumbents are well-equipped for head-to-head competition.
+
+
+Part 4: Responding to Disruption
+[Estimated time: 4–5 minutes]
+If disruption is driven by rational, structural forces rather than managerial incompetence, does that mean incumbents are helpless? Not at all. But the response requires something counterintuitive.
+BOARD: Response: Create an AUTONOMOUS unit
+Christensen’s primary prescription is organizational separation. If the disruptive opportunity requires a different cost structure, different customers, different processes, and different priorities—you can’t incubate it inside the existing organization. The existing organization’s immune system will kill it.
+Think about what happens when you give a disruptive project to your existing division. The sales team compares its small, uncertain revenue to established products. The finance team applies the same margin thresholds. The engineers default to over-engineering because that’s what existing customers demand. Every organizational reflex pushes the disruptive initiative toward serving existing customers—which defeats the entire purpose.
+BOARD: Organizational immune system: Existing processes, priorities, margins
+So the answer is a separate unit with its own P&L, its own metrics, its own freedom to pursue small, initially unprofitable markets. IBM did this when it created the PC. It set up an autonomous unit in Boca Raton, Florida—far from headquarters—with permission to source components externally, sell through retail, and operate at margins that would have been unacceptable for mainframes.
+BOARD: IBM PC: Boca Raton — Separate unit, separate rules, separate economics
+The result was the IBM PC—launched in just twelve months, which was lightning speed for IBM. They disrupted themselves before someone else did. At least temporarily.
+The harder question is what happens next. At some point, the disruptive business grows large enough that the parent company wants to reintegrate it, apply corporate standards, extract synergies. And that’s often when the magic dies. The tension between autonomy and integration is one of the hardest challenges in corporate strategy.
+
+
+Part 5: The Question for Your Organization
+[Estimated time: 2–3 minutes]
+In the next module, we’re going to shift from how disruption works to specific digital business model architectures—platforms and pipelines. You’ll see how the economics of platforms create entirely different competitive dynamics.
+BOARD: Is your core market being entered from below or from a non-consuming segment?
+But I want to leave you with this diagnostic question. Look at your industry. Is there a product or service that’s currently inferior to yours on traditional metrics—but cheaper, simpler, or more accessible? Is it improving? Is it being adopted by customers you currently don’t serve or don’t prioritize?
+If the answer is yes, you may be looking at the early stages of disruption. And the hardest part isn’t seeing it—it’s convincing your organization to respond, when every rational incentive says to focus on your best customers and your most profitable products.
+[Hold the pause. Let the tension sit.]
+That’s the Innovator’s Dilemma. Thank you. I’ll see you in the next module.

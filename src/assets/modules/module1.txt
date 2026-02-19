@@ -1,0 +1,72 @@
+Module 1: An Introduction to Business Models
+Lecture Script with Blackboard Cues
+
+[Stage direction] = Action or pause cue
+Regular text = Spoken narration
+Part 1: The Opening Hook
+[Estimated time: 3–4 minutes]
+BOARD: iPod + iTunes = Business Model, Not Technology
+Let me start with a question. Who invented the portable music player? If you said Apple, you’d be wrong. Diamond Multimedia had one. Best Data had one. Both were in the market before Apple showed up.
+So what did Apple do differently? They didn’t just build a better device. They wrapped exceptional technology in an exceptionally clever business model. And that distinction—between having great technology and having a great business model—is perhaps the single most important idea in this entire course.
+[Pause. Let that land.]
+BOARD: Razor-and-Blade (in Reverse)
+Here’s how it worked. In 2003, Apple launched the iPod alongside iTunes. They charged 99 cents per song on iTunes. And of that 99 cents, Apple kept only 10 cents. Ten cents! By any normal accounting, iTunes was practically a giveaway.
+BOARD: $0.99 song → $0.10 kept → iPod sales ↑
+But think about what that giveaway did. It made the iPod irresistible. Why would you buy any other music player when Apple had built the only seamless ecosystem for legally downloading music? iPod sales exploded—from 113,000 units per quarter to 800,000. Eventually, iPod and iTunes contributed 45% of Apple’s revenue. The company went from a billion dollars in market cap to 150 billion in just four years.
+This is the razor-and-blade model, but in reverse. Gillette gives you the razor cheaply and makes money on the blades—the consumable. Apple flipped it. They gave away the consumable—the music—to drive profits on the durable good—the iPod. Same logic, completely different architecture.
+And this is why business models matter. Nearly every corporate CEO today acknowledges needing to adapt their business model for the digital economy. It’s not optional. It’s existential.
+
+
+Part 2: The Four Elements of a Business Model
+[Estimated time: 6–8 minutes]
+So what exactly is a business model? Let me give you a clean framework. A business model answers four interlocking questions. And I want you to think of these as gears that mesh together—change one, and the others must adjust.
+Element 1: Customer Value Proposition
+BOARD: 1. Customer Value Proposition — “What job are you doing?”
+This is the most foundational question: What job are you doing for your customer? Not what product are you selling—what problem are you solving? And crucially, how do you differentiate yourself so that customers keep coming back to you and not someone else?
+BOARD: Barriers: Wealth / Access / Skill / Time
+I find it helpful to think about which barrier you’re breaking for the customer. There are really four: insufficient wealth, insufficient access, insufficient skill, or insufficient time. Every great value proposition breaks at least one of these.
+BOARD: QuickBooks → Skill barrier
+Take Intuit’s QuickBooks. Before QuickBooks, if you were a small business owner, your accounting options were either hire a professional or wrestle with software designed for accountants. QuickBooks broke the skill barrier. It said: you don’t need to be an accountant to manage your books.
+BOARD: Online education → Time + Access barriers
+Similarly, think about online executive education. An executive in, say, Bangalore who wants to take a course at a top business school faces two barriers—they can’t take time off work, and they can’t travel to a physical campus. Online education breaks both the time barrier and the access barrier simultaneously.
+Element 2: Profit Formula
+BOARD: 2. Profit Formula — Revenue, Cost, Margin, Velocity
+The second element is your profit formula. This isn’t just “how much do we charge.” It’s a system of four components: your revenue model—that’s pricing and volume; your cost structure—what are your direct costs and where are your economies of scale; your margin model—how much contribution per transaction; and resource velocity—how fast does your inventory turn, how well are your assets utilized.
+BOARD: ₹1,00,000 — Half the cheapest car | Margins ↓ but Volume ↑↑
+Let me illustrate with Tata’s Nano. When Ratan Tata announced he wanted to build a car for one lakh rupees—that’s about two thousand dollars, half the price of the cheapest car on the market—everyone thought he was crazy. And if you look at this through a traditional profit formula, they were right to be skeptical. Gross margins would have to drop dramatically. The cost structure would need radical reduction.
+But Tata wasn’t thinking about the same customers. At one lakh rupees, the addressable market wasn’t people choosing between a Nano and a Maruti. It was families of four riding a scooter in monsoon rain. The volume potential was transformational. The unit economics only work if you reimagine who the customer is.
+Element 3: Key Processes
+BOARD: 3. Key Processes — What must you excel at?
+Third: key processes. Given what you’ve promised the customer and the economics you need, what must your organization be truly excellent at? And this is where we introduce a critical concept.
+The Three Value Disciplines
+BOARD: Operational Excellence (Walmart, Amazon)
+BOARD: Customer Intimacy (Ritz-Carlton, Amazon)
+BOARD: Product Innovation (3M, Apple)
+Every company needs to choose a primary value discipline. Operational excellence means you compete on price, reliability, and convenience. Walmart built this. Amazon hired away Walmart’s supply chain executives to build it for e-commerce.
+Customer intimacy means you obsess over understanding and anticipating individual customer needs. The Ritz-Carlton is legendary for this—they track your preferences across every property worldwide. But notice, Amazon appears here too. Their recommendation engine, their anticipatory shipping patents—this is customer intimacy at algorithmic scale.
+And product innovation means you invest heavily in R&D, you commercialize fast, and you maintain quality. 3M famously required that 50% of each division’s profits come from products less than three years old. Apple tightly controls design but outsources assembly. They own the innovation; they rent the manufacturing.
+BOARD: Retail Stool: Price / Variety / Experience
+Traditionally, retailers stood on one or two legs of what we call the retail stool: price, variety, or experience. You could be Walmart on price, or Nordstrom on experience, or Amazon on variety. But here’s what’s changing—the digital economy increasingly demands that you deliver on all three. And that fundamentally changes what processes you need.
+Element 4: Key Resources
+BOARD: 4. Key Resources — Relationships between assets
+Finally, key resources. And here’s the nuance that most people miss: it’s not about having the best individual resources. It’s about how your resources relate to one another. When a company integrates its key resources and processes in a unique way to deliver a specific job perfectly for a specific customer, that’s when you get enduring competitive advantage. It’s the system, not the parts.
+
+
+Part 3: Why Incumbents Fail to Innovate
+[Estimated time: 4–5 minutes]
+BOARD: Good management → Bad adaptation
+Now, here’s the uncomfortable truth. Business model innovation is overwhelmingly the exception, not the norm. The most persistent pattern in business history is companies’ inability to respond when technologies and markets change around them.
+And here’s what makes it so insidious: the failure usually isn’t caused by bad management. It’s caused by good management—the very paradigms of good management that made a company successful in the first place become the constraints that prevent it from changing. The processes that made you efficient become the processes that make you rigid. The customer relationships that made you profitable become the reason you can’t see new customers.
+[Pause for emphasis]
+Go back to the Nano. To deliver a car at one lakh rupees, Tata couldn’t just make small improvements to existing processes. They had to reconceive everything. They minimized parts count. They outsourced 85% of components to 60% fewer vendors than a traditional car. They envisioned a modular assembly model where entrepreneur-owned plants would put the cars together—almost like a franchise model for manufacturing. None of this could have happened within an existing automotive business model. The existing model would have killed it.
+BOARD: “Can you?” vs. “Should you?” (use existing model)
+And this gives us perhaps the most important question in business model thinking. The question is not whether you CAN use your existing business model for a new opportunity. Of course you can—in the short run. The question is whether you SHOULD. Because if the new opportunity requires fundamentally different economics, different processes, different resources, then forcing it into your existing model isn’t pragmatism. It’s a slow form of failure.
+
+
+Part 4: Looking Ahead
+[Estimated time: 2–3 minutes]
+In the modules ahead, we’re going to go much deeper. We’ll explore Clayton Christensen’s framework for why incumbents systematically miss disruptions—and it’s not because they’re asleep. We’ll dissect two canonical digital business models: platforms and merchant models. We’ll look at what capabilities each requires and how competitive dynamics play out. And we’ll study a real transformation—how GE used the Internet of Things to shift from selling equipment to selling outcomes.
+BOARD: Are your four elements mutually reinforcing?
+But I want to leave you with one question to sit with. Look at your own business—or a business you know well. Map out the four elements: your value proposition, your profit formula, your key processes, your key resources. Are they mutually reinforcing? Do they fit together like gears, each one driving the others? Or is there dissonance? Because if there’s dissonance, that’s not a minor operational issue. That’s a signal that business model innovation isn’t just desirable—it’s necessary.
+[Hold the pause. Let the question resonate.]
+Thank you. I’ll see you in the next module.

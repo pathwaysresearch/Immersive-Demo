@@ -9,11 +9,21 @@ import './AgentInterface.css';
 
 const AGENT_ID = import.meta.env.VITE_ELEVENLABS_AGENT_ID as string;
 
+// Asset mapping using Vite's glob import
+const caseFiles = import.meta.glob('../assets/cases/*.txt', { query: '?raw', import: 'default', eager: true });
+const moduleFiles = import.meta.glob('../assets/modules/*.txt', { query: '?raw', import: 'default', eager: true });
+
+function getFileName(path: string) {
+    return path.split('/').pop()?.replace('.txt', '') || path;
+}
+
 export function AgentInterface() {
     const [isMuted, setIsMuted] = useState(false);
     const [volume, setVolume] = useState(0.8);
     const [error, setError] = useState<string | null>(null);
     const [blackboardData, setBlackboardData] = useState<string>('');
+    const [selectedCase, setSelectedCase] = useState<string>('');
+    const [selectedModule, setSelectedModule] = useState<string>('');
 
     const conversation = useConversation({
         micMuted: isMuted,
@@ -33,6 +43,10 @@ export function AgentInterface() {
                 setBlackboardData((prev) => prev + (prev ? '\n' : '') + text);
                 return "Successfully updated blackboard";
             }
+        },
+        dynamicVariables: {
+            case: 'NO CASES',
+            module: 'NO MODULES'
         }
     });
 
@@ -49,15 +63,28 @@ export function AgentInterface() {
         setError(null);
         try {
             await navigator.mediaDevices.getUserMedia({ audio: true });
+
+            // Prepare dynamic variables
+            const dynamicVariables: Record<string, string> = {};
+            if (selectedCase && caseFiles[selectedCase]) {
+                dynamicVariables['case_content'] = caseFiles[selectedCase] as string;
+            }
+            if (selectedModule && moduleFiles[selectedModule]) {
+                dynamicVariables['module_content'] = moduleFiles[selectedModule] as string;
+            }
+
+            console.log("Starting session with variables:", Object.keys(dynamicVariables));
+
             await conversation.startSession({
                 agentId: AGENT_ID,
                 connectionType: 'webrtc',
+                dynamicVariables
             });
         } catch (err) {
             const message = err instanceof Error ? err.message : 'Failed to start conversation.';
             setError(message);
         }
-    }, [conversation]);
+    }, [conversation, selectedCase, selectedModule]);
 
     const handleStop = useCallback(async () => {
         try {
@@ -92,6 +119,42 @@ export function AgentInterface() {
                         <span className="agent-brand-name">ElevenLabs Agent</span>
                     </div>
                     <StatusBadge status={status === 'connected' || status === 'connecting' || status === 'disconnected' ? status : 'disconnected'} />
+                </div>
+
+                {/* Content Selection UI */}
+                <div className="content-selection glass">
+                    <div className="selection-group">
+                        <label htmlFor="case-select">Select Case</label>
+                        <select
+                            id="case-select"
+                            value={selectedCase}
+                            onChange={(e) => setSelectedCase(e.target.value)}
+                            disabled={status !== 'disconnected'}
+                        >
+                            <option value="">None (Default)</option>
+                            {Object.keys(caseFiles).map((path) => (
+                                <option key={path} value={path}>
+                                    {getFileName(path)}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="selection-group">
+                        <label htmlFor="module-select">Select Module</label>
+                        <select
+                            id="module-select"
+                            value={selectedModule}
+                            onChange={(e) => setSelectedModule(e.target.value)}
+                            disabled={status !== 'disconnected'}
+                        >
+                            <option value="">None (Default)</option>
+                            {Object.keys(moduleFiles).map((path) => (
+                                <option key={path} value={path}>
+                                    {getFileName(path)}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
                 </div>
 
                 {/* Avatar */}

@@ -1,0 +1,77 @@
+
+MODULE 3
+Platform Business Models:
+The Economics of Connecting
+Lecture Script with Blackboard Cues
+Estimated delivery time: 18–22 minutes
+
+
+Part 1: Pipeline vs. Platform
+[Estimated time: 4–5 minutes]
+In the last module, we talked about why incumbents fail at disruption. Today we’re going to examine the business model architecture that has driven many of the most powerful disruptions of the last two decades: platforms.
+Let’s start with a fundamental distinction.
+BOARD: Pipeline: Linear value chain → Create → Distribute → Sell
+For most of business history, companies operated what we can call pipelines. A pipeline business creates value in a linear sequence. You design a product, manufacture it, distribute it, and sell it to a customer. Value flows in one direction—from the company to the consumer. Think of a car manufacturer. Raw materials come in one end, finished cars come out the other, customers buy them. That’s a pipeline.
+BOARD: Platform: Creates value by enabling INTERACTIONS between groups
+A platform business is fundamentally different. A platform doesn’t primarily create the product or service—it creates the infrastructure for others to create, exchange, or consume value. The platform’s job is to facilitate interactions between two or more distinct groups who need each other.
+Think about Uber. Uber doesn’t own cars. It doesn’t employ drivers. What it owns is the platform that connects riders who need transport with drivers who have cars. The value is in the connection, not the production.
+BOARD: Pipeline owns assets. Platform orchestrates interactions.
+This distinction matters enormously for economics, strategy, and competitive dynamics. And it explains why platform companies have grown to extraordinary scale so quickly. As of today, seven of the ten most valuable companies in the world are platform businesses.
+
+
+Part 2: Network Effects — The Engine of Platform Power
+[Estimated time: 6–8 minutes]
+So what gives platforms their extraordinary power? The answer is network effects. And I need you to understand this concept precisely, because it is the single most important source of competitive advantage in the digital economy.
+BOARD: Network Effect: Each additional user makes the platform more valuable for ALL users
+A network effect exists when each additional user makes the product or service more valuable for every other user. The telephone is the classic example. One telephone is useless. Two telephones can make one connection. A hundred telephones can make nearly 5,000 connections. The value of the network grows much faster than the number of users.
+Direct vs. Indirect Network Effects
+BOARD: Direct: More users of SAME type → more value (WhatsApp, telephone)
+Direct network effects are straightforward. More users of the same type increase value for everyone. WhatsApp is more useful when more of your friends are on it. Facebook is more interesting when more people you know are posting.
+BOARD: Indirect: More users of TYPE A → attracts more of TYPE B (and vice versa)
+Indirect network effects—also called cross-side effects—are more subtle and arguably more powerful. More riders on Uber attract more drivers, because drivers can earn more. More drivers attract more riders, because wait times decrease. Each side feeds the other in a virtuous cycle.
+This creates a powerful dynamic. Once a platform achieves critical mass on both sides, it becomes extremely difficult for competitors to catch up. Why would a new rider join a platform with fewer drivers? Why would a driver join a platform with fewer riders?
+BOARD: Winner-take-all (or winner-take-most) dynamics
+This is why platform markets often exhibit winner-take-all or winner-take-most dynamics. In ride-sharing, in social networking, in search—one platform tends to dominate because network effects create a self-reinforcing advantage. The big get bigger. The small struggle to reach critical mass.
+The Chicken-and-Egg Problem
+BOARD: Chicken-and-egg: Which side do you attract FIRST?
+But here’s the challenge every platform faces at the beginning. If riders won’t join without drivers, and drivers won’t join without riders—how do you start? This is the chicken-and-egg problem, and solving it is perhaps the hardest strategic challenge in launching a platform.
+Different platforms have solved it differently. Uber subsidized drivers—guaranteeing hourly pay even when ride requests were low. Amazon seeded its marketplace by being a massive buyer itself first. Adobe gave away the Acrobat Reader to build the installed base that made the PDF format standard, then sold the Acrobat Writer.
+BOARD: Solutions: Subsidize one side / Seed supply / Single-user value first
+The general principle is this: you need to provide standalone value to at least one side before the cross-side network effects kick in. If your platform has zero users on either side, cross-side effects are zero. You need a way to break the cold-start problem.
+
+
+Part 3: The Economics of Platforms
+[Estimated time: 5–6 minutes]
+Let’s talk about how platforms make money, because the economics are quite different from pipeline businesses.
+BOARD: Pipeline economics: Marginal cost per unit / Economies of scale
+A pipeline business has a marginal cost for every unit it produces and sells. Toyota incurs material and labor costs for every car. The way a pipeline business scales is through economies of scale—spreading fixed costs over more units, driving down per-unit cost. This works, but it’s linear. Doubling output requires roughly proportional increases in inputs.
+BOARD: Platform economics: Near-zero marginal cost per transaction
+A platform business, by contrast, has near-zero marginal cost per transaction. When one more rider and one more driver connect through Uber, the incremental cost to Uber is essentially zero—a bit of server time. The platform’s costs are mostly fixed: engineering, infrastructure, trust and safety. Once those are built, adding users and transactions is almost free.
+This is why platform businesses can scale so rapidly and why they often operate at losses initially. They’re investing in building the infrastructure and the network. Once the network reaches critical mass, the economics become extraordinarily attractive.
+BOARD: Value capture: Transaction fees / Advertising / Data monetization
+Platforms typically capture value in one of three ways. First, transaction fees—Uber takes a percentage of each ride, Airbnb takes a fee from hosts and guests. Second, advertising—Google and Facebook monetize attention by selling access to their user base. Third, data monetization—the platform’s unique visibility into both sides of the market generates insights that have independent value.
+Multi-homing and Platform Competition
+BOARD: Multi-homing: Users on MULTIPLE platforms simultaneously
+Now, there’s an important nuance. Winner-take-all dynamics aren’t inevitable. The key variable is multi-homing costs. If users can easily be on multiple platforms simultaneously—what we call multi-homing—then no single platform captures the entire market.
+Think about food delivery. Restaurants are on Swiggy and Zomato simultaneously. Customers often have both apps. The switching costs are low. This limits winner-take-all dynamics and keeps margins under pressure. Compare that to a social network, where your entire social graph is on one platform—switching costs are enormous, which is why Facebook has maintained dominance for two decades.
+BOARD: Low multi-homing cost → More competition / High multi-homing cost → Winner-take-all
+
+
+Part 4: Platform Governance — The Invisible Architecture
+[Estimated time: 3–4 minutes]
+There’s one more dimension of platforms that’s easy to overlook but critically important: governance. A platform needs rules. Who can participate? What behaviors are allowed? How are disputes resolved? How is quality maintained?
+BOARD: Governance: Rules of participation, quality control, dispute resolution
+This matters because a platform’s value depends entirely on the quality of interactions it facilitates. If Airbnb listings are inaccurate, if Uber drivers are unsafe, if Amazon marketplace products are counterfeit—the platform’s value collapses. Trust is the platform’s most critical asset.
+But governance is a balancing act. Too much control, and you restrict the supply side—fewer sellers, fewer drivers, fewer hosts. Too little control, and quality degrades. The art of platform management is finding the right level of openness.
+BOARD: Governance tension: Openness (growth) vs. Control (quality)
+Apple’s App Store is tightly governed—every app is reviewed before publication. This maintains quality but frustrates developers. Android’s Play Store is more open—easier for developers, but more malware and low-quality apps. Neither approach is universally correct; each reflects a strategic choice about where to sit on the openness-control spectrum.
+
+
+Part 5: Platforms and the Future of Competition
+[Estimated time: 2–3 minutes]
+In the next module, we’ll look at a very different digital business model—the merchant model. Think Amazon as a retailer, not as a marketplace. Netflix as a content buyer, not a platform. Different economics, different strategic logic.
+BOARD: Does your industry have the conditions for platform disruption?
+But here’s what I want you thinking about. Look at your industry. Are there two or more groups that need each other but currently find each other through inefficient channels? High search costs? Information asymmetry? Fragmented supply? Those are the conditions where a platform can create enormous value—and disrupt incumbents who are still operating as pipelines.
+The platform doesn’t need to be better at producing the product. It just needs to be better at connecting supply and demand. And in industry after industry, that’s proven to be enough.
+[Hold the pause.]
+Thank you. I’ll see you in the next module.

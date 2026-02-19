@@ -1,0 +1,69 @@
+SCENARIO SIMULATION CASE
+Dhruva Insurance: System Upgrade
+When Understanding the Code Isn’t Enough to Understand the Company
+Nagarro BFSI Practice  |  Interactive simulation  |  5 consequential decisions
+
+Your Mentor: Sasha Iyer
+Sasha Iyer has a theory that every good technologist eventually becomes a business strategist, usually against their will. Sasha should know. Twenty-two years ago, Sasha was writing actuarial models in SAS at an insurance company in Detroit, convinced that the real power in any organization lived in whoever controlled the data pipeline. Two decades later—after running strategy for three insurers and turning around a health insurance company—Sasha returned to India to mentor at Nagarro.
+“I came back for two reasons,” Sasha says. “First, I wanted to help engineers learn to think about business the way I had to learn. Painfully and then suddenly. Second—and I cannot stress this enough—the dosa situation in Michigan is unconscionable.”
+Sasha’s mentoring approach with engineers is specific. No hand-waving strategy jargon. Every concept gets grounded in a system or a structure. “You already think in terms of inputs, processes, and outputs,” Sasha told you in your first meeting. “A business model is exactly that. The problem is that most engineers stop at the technical process and never look at the economic process wrapped around it. We’re going to fix that.”
+
+
+You
+Your name is Jagan Srinivas, and you are four months into discovering that the real world does not compile cleanly.
+You grew up in Warangal, Telangana, in a house where the WiFi password was more fiercely guarded than family recipes. You wrote your first Python script at fifteen—a web scraper that pulled cricket scores because refreshing Cricinfo manually felt like a personal failure. At NIT Warangal, you studied computer science, built a minor reputation for being the person who could debug anything at 2 AM, and graduated with a conviction that most problems in the world are, at their core, data pipeline problems.
+Your technical toolkit is solid: Python, Java, REST APIs, microservices, cloud infra basics, and a love for clean documentation that your peers find either admirable or slightly unhinged. Two internships shaped you—one at a payments startup where you built a transaction reconciliation API, and one at an IT services firm where you learned that “client requirements” is a euphemism for “a moving target that sometimes moves backward.”
+Nagarro hired you into the BFSI technology practice. You expected to write code for banking systems. Instead, your practice lead said in week one: “We don’t just build what clients ask for. We help them figure out what they should be asking for. That means understanding their business, not just their tech stack.” You nodded. You did not fully understand what that meant.
+Your first engagement is with Dhruva Insurance. You know APIs and systems design. You do not know what a combined ratio is, why anyone would voluntarily work in insurance, or what a “value proposition” means outside a Shark Tank pitch. Sasha’s job is to bridge that gap—not by teaching you an MBA, but by showing you that the systems thinking you already do naturally is the same muscle business model analysis requires.
+
+
+Dhruva Insurance
+Dhruva General Insurance has been around since 1999. Steadily, under regulation, and then suddenly facing a world that doesn’t look like it used to—Dhruva has become a major player in health and motor insurance. The scale: 14.5 million active policies, 275 branches, 9,800 agents, three bancassurance partnerships. Gross written premium: ₹11,800 crore.
+Think of it this way, since you’re a systems person. Dhruva’s current architecture has three layers. An input layer: customers and agents feeding in applications and claims. A processing layer: underwriters, actuaries, and claims teams assessing risk and settling payouts. An output layer: policies issued and claims paid. For twenty-five years, the company has been optimizing this pipeline—faster processing, fewer errors, better risk prediction. The pipeline itself has never been questioned. Until now.
+
+
+The CEO: Tarun Malik
+Tarun Malik has run Dhruva for fourteen years and has pushed through two waves of change that the organization resisted at the time and now takes credit for. The first, starting in 2012, digitized operations: automated underwriting, mobile claims, AI pricing. The second, around 2018, layered digital services around the core product—wellness content, real-time policy management, chatbot support. Both made the existing pipeline faster and smarter.
+The third wave is different. Tarun wants to replace the pipeline with a platform. Instead of manufacturing products and pushing them through agents, Dhruva would orchestrate a network connecting customers to health and mobility services: e-pharmacies, fitness tracking, telemedicine, chronic care management, roadside assistance. Insurance becomes one service among many on a platform Dhruva controls.
+“Right now,” Tarun said in a town hall you watched on the internal portal, “our customers think about us twice a year. When they buy and when they claim. A fitness app thinks about them twice a day. If we don’t become part of the daily loop, we become a dumb pipe that someone else puts a smart layer on top of.”
+You recognized the architecture immediately. Tarun is describing what you’d call a platform layer above commodity services—the operating system play. Own the orchestration, let others provide components. The question is whether a company with 9,800 field agents and a twenty-five-year-old pipeline can execute that shift. Legacy system migrations are hard enough. Legacy business model migrations are something you haven’t thought about before.
+
+
+System Status: Key Metrics
+Metric
+Value
+Gross Written Premium (FY24)
+₹11,800 Cr
+Combined Ratio
+97.4%
+Health Retention Rate
+81%
+Avg. Customer Touchpoints / Year
+2.1
+Tech Spend (Last Decade)
+₹360 Cr
+NPS
+52
+Agent Network
+9,800
+Dividend (Last 5 Yrs)
+Highest in company history
+P/E Ratio (5-Year Trend)
+Declined from 29x to 17x
+
+
+Here’s what these numbers mean, since you’re new to insurance. Combined ratio under 100% means the company earns a profit purely from underwriting—before investment income. Good. Retention at 81% means four out of five health customers renew. Also good. Now the last row: the P/E multiple has nearly halved in five years, even as dividends hit records. The market is paying for today’s profits but doesn’t believe in tomorrow. When Tarun presented the platform vision, the stock dropped 3.6%. An analyst wrote: “Dhruva should focus on underwriting discipline, not platform experiments.”
+Tarun forwarded the note to the leadership team: “This is the constraint we need to understand before we can overcome it.”
+
+
+The Five Decisions
+Sasha will guide you through five strategic choices. Each requires thinking beyond the technology layer into business logic, economics, and organizational forces. Your systems thinking transfers—business models have inputs, processes, outputs, and feedback loops. The difference is that the components are human, financial, and organizational, not computational.
+Decision 1: What is the business model transformation across Dhruva’s three phases—and how does the revenue model change?
+Decision 2: Why transform now, when nothing is broken?
+Decision 3: What capabilities does Dhruva need for the platform—and what should it build versus partner for?
+Decision 4: How should AI change the way work gets organized inside Dhruva?
+Decision 5: What forces will resist this transformation—and how does the company navigate them?
+
+Sasha opens the conversation with a grin. “Alright, Jagan. Let me ask you something. You’ve built APIs. You know what happens when a client calls an endpoint—request in, response out, somebody gets charged. Now: Dhruva Insurance. A customer pays ₹15,000 for a health policy. The company might pay out ₹200,000 in claims, or zero. Where’s the business model in that? Because it’s not request-response. It’s something else entirely.”
+
+You think about it. It’s the first business question you’ve found genuinely interesting.
