@@ -1,11 +1,14 @@
+import { MathJaxContext } from 'better-react-mathjax';
 import './App.css';
 import { AgentInterface } from './components/AgentInterface';
 
 function App() {
   return (
-    <div className="app">
-      <AgentInterface />
-    </div>
+    <MathJaxContext>
+      <div className="app">
+        <AgentInterface />
+      </div>
+    </MathJaxContext>
   );
 }
 

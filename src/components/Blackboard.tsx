@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { MathJax } from 'better-react-mathjax';
 import './Blackboard.css';
 
 interface BlackboardProps {
@@ -26,11 +27,11 @@ export const Blackboard: React.FC<BlackboardProps> = ({ content }) => {
             </div>
             <div className="blackboard-content" ref={scrollRef}>
                 {content ? (
-                    <div className="blackboard-text">
+                    <MathJax className="blackboard-text">
                         {content.split('\n').map((line, i) => (
                             <p key={i}>{line}</p>
                         ))}
-                    </div>
+                    </MathJax>
                 ) : (
                     <div className="blackboard-placeholder">
                         Waiting for the agent to write something...
