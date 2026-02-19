@@ -22,7 +22,7 @@ export function AgentInterface() {
     const [volume, setVolume] = useState(0.8);
     const [error, setError] = useState<string | null>(null);
     const [blackboardData, setBlackboardData] = useState<string>('');
-    const [selectedCase, setSelectedCase] = useState<string>('');
+    const [selectedLearner, setSelectedLearner] = useState<string>('');
     const [selectedModule, setSelectedModule] = useState<string>('');
 
     const conversation = useConversation({
@@ -62,25 +62,34 @@ export function AgentInterface() {
 
             // Prepare dynamic variables
             const dynamicVariables: Record<string, string> = {};
-            if (selectedCase && learnerFiles[selectedCase]) {
-                dynamicVariables['learner'] = learnerFiles[selectedCase] as string;
-            }
-            if (selectedModule && moduleFiles[selectedModule]) {
-                dynamicVariables['module'] = moduleFiles[selectedModule] as string;
+
+            if (selectedLearner) {
+                const content = learnerFiles[selectedLearner];
+                if (content && typeof content === 'string') {
+                    dynamicVariables['learner'] = content.trim();
+                }
             }
 
-            console.log("Starting session with variables:", Object.keys(dynamicVariables));
+            if (selectedModule) {
+                const content = moduleFiles[selectedModule];
+                if (content && typeof content === 'string') {
+                    dynamicVariables['module'] = content.trim();
+                }
+            }
+
+            console.log("DEBUG: Dynamic Variables to be sent:", JSON.stringify(dynamicVariables, null, 2));
 
             await conversation.startSession({
                 agentId: AGENT_ID,
-                connectionType: 'webrtc',
+                connectionType: 'websocket', // Using websocket as previously recommended for stability
                 dynamicVariables
             });
         } catch (err) {
+            console.error("Start session failed:", err);
             const message = err instanceof Error ? err.message : 'Failed to start conversation.';
             setError(message);
         }
-    }, [conversation, selectedCase, selectedModule]);
+    }, [conversation, selectedLearner, selectedModule]);
 
     const handleStop = useCallback(async () => {
         try {
@@ -123,8 +132,8 @@ export function AgentInterface() {
                         <label htmlFor="case-select">Select Learner</label>
                         <select
                             id="case-select"
-                            value={selectedCase}
-                            onChange={(e) => setSelectedCase(e.target.value)}
+                            value={selectedLearner}
+                            onChange={(e) => setSelectedLearner(e.target.value)}
                             disabled={status !== 'disconnected'}
                         >
                             <option value="">None (Default)</option>
