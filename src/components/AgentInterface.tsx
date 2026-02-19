@@ -43,10 +43,6 @@ export function AgentInterface() {
                 setBlackboardData((prev) => prev + (prev ? '\n' : '') + text);
                 return "Successfully updated blackboard";
             }
-        },
-        dynamicVariables: {
-            case: 'NO CASES',
-            module: 'NO MODULES'
         }
     });
 
@@ -67,10 +63,10 @@ export function AgentInterface() {
             // Prepare dynamic variables
             const dynamicVariables: Record<string, string> = {};
             if (selectedCase && caseFiles[selectedCase]) {
-                dynamicVariables['case_content'] = caseFiles[selectedCase] as string;
+                dynamicVariables['case'] = caseFiles[selectedCase] as string;
             }
             if (selectedModule && moduleFiles[selectedModule]) {
-                dynamicVariables['module_content'] = moduleFiles[selectedModule] as string;
+                dynamicVariables['module'] = moduleFiles[selectedModule] as string;
             }
 
             console.log("Starting session with variables:", Object.keys(dynamicVariables));
