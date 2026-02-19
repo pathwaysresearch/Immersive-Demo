@@ -68,13 +68,13 @@ export function AgentInterface() {
         }
     }, [conversation]);
 
-    const handleToggleMute = useCallback(() => {
-        setIsMuted((prev) => !prev);
-    }, []);
+    const handleToggleMute = () => {
+        setIsMuted(prev => !prev);
+    };
 
-    const handleVolumeChange = useCallback((v: number) => {
+    const handleVolumeChange = (v: number) => {
         setVolume(v);
-    }, []);
+    };
 
     const getFrequencyData = status === 'connected'
         ? () => conversation.getOutputByteFrequencyData()
