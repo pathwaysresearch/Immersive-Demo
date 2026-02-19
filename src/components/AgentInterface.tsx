@@ -10,7 +10,7 @@ import './AgentInterface.css';
 const AGENT_ID = import.meta.env.VITE_ELEVENLABS_AGENT_ID as string;
 
 // Asset mapping using Vite's glob import
-const caseFiles = import.meta.glob('../assets/cases/*.txt', { query: '?raw', import: 'default', eager: true });
+const learnerFiles = import.meta.glob('../assets/learners/*.txt', { query: '?raw', import: 'default', eager: true });
 const moduleFiles = import.meta.glob('../assets/modules/*.txt', { query: '?raw', import: 'default', eager: true });
 
 function getFileName(path: string) {
@@ -62,8 +62,8 @@ export function AgentInterface() {
 
             // Prepare dynamic variables
             const dynamicVariables: Record<string, string> = {};
-            if (selectedCase && caseFiles[selectedCase]) {
-                dynamicVariables['case'] = caseFiles[selectedCase] as string;
+            if (selectedCase && learnerFiles[selectedCase]) {
+                dynamicVariables['learner'] = learnerFiles[selectedCase] as string;
             }
             if (selectedModule && moduleFiles[selectedModule]) {
                 dynamicVariables['module'] = moduleFiles[selectedModule] as string;
@@ -120,7 +120,7 @@ export function AgentInterface() {
                 {/* Content Selection UI */}
                 <div className="content-selection glass">
                     <div className="selection-group">
-                        <label htmlFor="case-select">Select Case</label>
+                        <label htmlFor="case-select">Select Learner</label>
                         <select
                             id="case-select"
                             value={selectedCase}
@@ -128,7 +128,7 @@ export function AgentInterface() {
                             disabled={status !== 'disconnected'}
                         >
                             <option value="">None (Default)</option>
-                            {Object.keys(caseFiles).map((path) => (
+                            {Object.keys(learnerFiles).map((path) => (
                                 <option key={path} value={path}>
                                     {getFileName(path)}
                                 </option>
