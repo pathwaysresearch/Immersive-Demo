@@ -2,7 +2,7 @@ import { Mic, MicOff, Square, Volume2, VolumeX } from 'lucide-react';
 import './ConversationControls.css';
 
 interface ConversationControlsProps {
-    status: 'connected' | 'connecting' | 'disconnected';
+    status: 'connected' | 'connecting' | 'disconnected' | 'disconnecting';
     isMuted: boolean;
     volume: number;
     onStart: () => void;

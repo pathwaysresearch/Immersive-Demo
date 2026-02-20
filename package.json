@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.2.49",
+    "@anthropic-ai/sdk": "^0.78.0",
     "@elevenlabs/react": "^0.14.0",
     "better-react-mathjax": "^3.0.0",
     "lucide-react": "^0.574.0",
