@@ -37,9 +37,10 @@ export function AgentInterface() {
     const [isThinking, setIsThinking] = useState(false);
     const [sessionCount, setSessionCount] = useState(0);
 
-    // Helper to format history for dynamic variables
+    // Format history for ElevenLabs dynamicVariables (text only, no blackboard)
     const getFormattedHistory = useCallback((msgs: ChatMessage[]) => {
         return msgs
+            .filter(m => m.text && !m.text.startsWith('[BLACKBOARD UPDATE]'))
             .map(m => `${m.role === 'user' ? 'Learner' : 'Tutor'}: ${m.text}`)
             .join('\n');
     }, []);
@@ -56,26 +57,42 @@ export function AgentInterface() {
             setError(null);
         },
         onMessage: (message: any) => {
-            console.log("DEBUG: ElevenLabs message:", message);
-            if (message?.type === 'transcript' && message?.is_final) {
-                const newMessage: ChatMessage = {
+            // Detailed log to see exact structure in console
+            console.log("DEBUG: ElevenLabs message received:", JSON.stringify(message));
+
+            const text = (message?.text || message?.message || message?.transcript || message?.content || "").trim();
+            if (!text) return;
+
+            // Detect role: user vs assistant/agent
+            const isUser =
+                message?.role === 'user' ||
+                message?.source === 'user' ||
+                message?.type === 'transcript' ||
+                message?.type === 'user_transcript' ||
+                (message?.message_type === 'transcript' && message?.source === 'user');
+
+            // Default to assistant if we can't definitively tell it's user, 
+            // but only if we have text. This is a fallback to ensure we don't miss agent replies.
+            const role: 'user' | 'assistant' = isUser ? 'user' : 'assistant';
+
+            setMessages(prev => {
+                // De-duplication: check if same text and role were added very recently (within 5s)
+                const isDuplicate = prev.some(m =>
+                    m.text.trim() === text &&
+                    m.role === role &&
+                    (new Date().getTime() - m.timestamp.getTime() < 5000)
+                );
+
+                if (isDuplicate) return prev;
+
+                return [...prev, {
                     id: Math.random().toString(36).substring(2, 11),
-                    role: 'user',
-                    text: message.text,
+                    role,
+                    text,
                     type: 'audio',
                     timestamp: new Date()
-                };
-                setMessages(prev => [...prev, newMessage]);
-            } else if (message?.type === 'agent_response') {
-                const newMessage: ChatMessage = {
-                    id: Math.random().toString(36).substring(2, 11),
-                    role: 'assistant',
-                    text: message.text,
-                    type: 'audio',
-                    timestamp: new Date()
-                };
-                setMessages(prev => [...prev, newMessage]);
-            }
+                }];
+            });
         },
         onError: (err: any) => {
             console.error("DEBUG: Conversation error:", err);
@@ -177,13 +194,15 @@ export function AgentInterface() {
             timestamp: new Date()
         };
 
-        const updatedMessages = [...messages, userMsg];
-        setMessages(updatedMessages);
+        const allMessagesForClaude = [...messages, userMsg];
+
+        setMessages(prev => [...prev, userMsg]);
         setIsThinking(true);
 
         if (status === 'connected') {
             conversation.sendUserActivity();
-            conversation.sendContextualUpdate(`Learner typed: ${userText}`);
+            // Use sendUserMessage so ElevenLabs also updates its internal history/context
+            conversation.sendUserMessage(userText);
         }
 
         try {
@@ -193,22 +212,6 @@ export function AgentInterface() {
                 learnerContent = typeof content === 'string' ? content : (content as any)?.default || '';
             }
 
-            let moduleContent = '';
-            if (selectedModule) {
-                const content = moduleFiles[selectedModule];
-                moduleContent = typeof content === 'string' ? content : (content as any)?.default || '';
-            }
-
-            // Build history from PREVIOUS messages only (not including the current question)
-            // Then append the current user turn at the end as the active message
-            const historyMessages: Anthropic.MessageParam[] = messages.map(m => ({
-                role: m.role as 'user' | 'assistant',
-                content: m.text
-            }));
-            const anthropicMessages: Anthropic.MessageParam[] = [
-                ...historyMessages,
-                { role: 'user', content: userText }
-            ];
 
             const systemPrompt = `
 $ Learner Profile:
@@ -240,6 +243,21 @@ Strictly adhere to the prompt. Do not assume that the learner knows the case or 
 
 Answer in points normally, Don't Add [Audio] and [Update blackboard], Continue the conversation as usual.
 `;
+
+            // Build clean message array — filter out blackboard updates and empty streaming placeholders
+            const anthropicMessages: Anthropic.MessageParam[] = allMessagesForClaude
+                .filter(m => m.text && m.text.trim() !== '' && !m.text.startsWith('[BLACKBOARD UPDATE]'))
+                .map(m => ({
+                    role: m.role as 'user' | 'assistant',
+                    content: m.text.trim()
+                }));
+
+            // ====== DEBUG: Show exactly what Claude receives ======
+            console.log(`%c[Claude History] Sending ${anthropicMessages.length} messages:`, 'color: cyan; font-weight: bold');
+            anthropicMessages.forEach((m, i) =>
+                console.log(`  [${i}] (${m.role}): ${String(m.content).slice(0, 120)}`)
+            );
+            // =====================================================
 
             const stream = await anthropic.messages.create({
                 max_tokens: 1024,
