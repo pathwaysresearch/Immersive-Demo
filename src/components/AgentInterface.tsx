@@ -230,6 +230,7 @@ Your primary goal is to teach the learner a new concept or skill.
 
 Strictly adhere to the prompt. Do not assume that the learner knows the case or the scenario you are working with the learner. Avoid literal strings like "\\n", "\\r", or "\\cr" in the markdown text outside of math blocks. They break the renderer.
 
+Answer in points normally, Don't Add [Audio] and [Update blackboard], Continue the conversation as usual.
 `;
 
             const stream = await anthropic.messages.create({
