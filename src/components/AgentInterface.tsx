@@ -199,10 +199,16 @@ export function AgentInterface() {
                 moduleContent = typeof content === 'string' ? content : (content as any)?.default || '';
             }
 
-            const anthropicMessages: Anthropic.MessageParam[] = updatedMessages.map(m => ({
+            // Build history from PREVIOUS messages only (not including the current question)
+            // Then append the current user turn at the end as the active message
+            const historyMessages: Anthropic.MessageParam[] = messages.map(m => ({
                 role: m.role as 'user' | 'assistant',
                 content: m.text
             }));
+            const anthropicMessages: Anthropic.MessageParam[] = [
+                ...historyMessages,
+                { role: 'user', content: userText }
+            ];
 
             const systemPrompt = `
 $ Learner Profile:
