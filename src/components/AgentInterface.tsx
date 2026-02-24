@@ -35,6 +35,7 @@ export function AgentInterface() {
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [inputText, setInputText] = useState('');
     const [isThinking, setIsThinking] = useState(false);
+    const [sessionCount, setSessionCount] = useState(0);
 
     // Helper to format history for dynamic variables
     const getFormattedHistory = useCallback((msgs: ChatMessage[]) => {
@@ -95,20 +96,6 @@ export function AgentInterface() {
                 };
                 setMessages(prev => [...prev, newMessage]);
                 return "Blackboard content has been posted to the chat.";
-            },
-            update_blackboard: (parameters: any) => {
-                console.log("DEBUG: update_blackboard called with:", parameters);
-                const content = parameters?.content || parameters?.text || (typeof parameters === 'string' ? parameters : JSON.stringify(parameters));
-
-                const newMessage: ChatMessage = {
-                    id: Math.random().toString(36).substring(2, 11),
-                    role: 'assistant',
-                    text: `[BLACKBOARD UPDATE]\n${content}`,
-                    type: 'audio',
-                    timestamp: new Date()
-                };
-                setMessages(prev => [...prev, newMessage]);
-                return "Blackboard content has been posted to the chat.";
             }
         }
     });
@@ -148,13 +135,22 @@ export function AgentInterface() {
                 }
             }
 
+            // Determine greeting based on session count
+            const currentSession = sessionCount + 1;
+            const greeting = currentSession === 1
+                ? "Hello am Atlas, Get ready to take notes, Research shows taking notes helps for learning."
+                : "Shall we continue from where we left off?";
+
+            setSessionCount(currentSession);
+
             await conversation.startSession({
                 agentId: AGENT_ID,
                 connectionType: 'websocket',
                 dynamicVariables: {
                     learner: learnerContent.trim(),
-                    module: moduleContent.trim(),
-                    history: getFormattedHistory(messages)
+                    // module: moduleContent.trim(),
+                    history: getFormattedHistory(messages),
+                    message: greeting
                 }
             } as any);
         } catch (err) {
@@ -207,11 +203,33 @@ export function AgentInterface() {
             }));
 
             const systemPrompt = `
-You are an immersive tutor. 
-Learner Profile: ${learnerContent}
-Current Module: ${moduleContent}
+$ Learner Profile:
+${learnerContent}
 
-Respond concisely for a chat window. If you have detailed visual or structured information to share (like formulas or steps), please include them in your response.
+# Personality
+
+You are a funny and quirky professor, skilled at explaining complex topics in simple terms. You are patient and encouraging, always making sure the learner understands each step before moving on.
+
+# Environment
+
+You are engaging in a conversation with a learner.You must continue the conversation from the chat history if it exists.
+
+# Tone
+
+Your tone is funny and quirky. You speak one line at a time, like a professor writing on a board. You use multimodal output, 70% audio and 30% text.
+
+# Goal
+
+Your primary goal is to teach the learner a new concept or skill.
+
+1.  Start with a funny and quirky intro. Do not say you are being funny or quirky.
+2.  Present the holistic picture first, one line at a time, telling the learner what we will do and learn. Keep it short and crisp.
+3.  For math display, ALWAYS use Mathjax and render in LateX format. Wrap math in delimiters ($...$ or $$...$$).
+
+# Guardrails
+
+Strictly adhere to the prompt. Do not assume that the learner knows the case or the scenario you are working with the learner. Avoid literal strings like "\\n", "\\r", or "\\cr" in the markdown text outside of math blocks. They break the renderer.
+
 `;
 
             const stream = await anthropic.messages.create({
@@ -222,26 +240,30 @@ Respond concisely for a chat window. If you have detailed visual or structured i
                 stream: true,
             });
 
+            const assistantMsgId = Math.random().toString(36).substring(2, 11);
             let fullResponse = '';
+
+            // Add initial empty assistant message for streaming
+            setMessages(prev => [...prev, {
+                id: assistantMsgId,
+                role: 'assistant',
+                text: '',
+                type: 'text',
+                timestamp: new Date()
+            }]);
+
             for await (const event of stream) {
                 if (event.type === 'content_block_delta' && 'text' in event.delta) {
                     fullResponse += event.delta.text;
+                    // Update the last message text in real-time
+                    setMessages(prev => prev.map(m =>
+                        m.id === assistantMsgId ? { ...m, text: fullResponse } : m
+                    ));
                 }
             }
 
-            if (fullResponse) {
-                const assistantMsg: ChatMessage = {
-                    id: Math.random().toString(36).substring(2, 11),
-                    role: 'assistant',
-                    text: fullResponse,
-                    type: 'text',
-                    timestamp: new Date()
-                };
-                setMessages(prev => [...prev, assistantMsg]);
-
-                if (status === 'connected') {
-                    conversation.sendContextualUpdate(`Tutor (text response): ${fullResponse}`);
-                }
+            if (fullResponse && status === 'connected') {
+                conversation.sendContextualUpdate(`Tutor (text response): ${fullResponse}`);
             }
         } catch (err) {
             console.error("Claude query failed:", err);

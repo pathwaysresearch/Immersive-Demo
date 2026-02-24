@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import type { ChatMessage } from '../types/chat';
 import { Mic, MessageSquare } from 'lucide-react';
 import { MathJax } from 'better-react-mathjax';
+import ReactMarkdown from 'react-markdown';
 import './ChatLog.css';
 
 interface ChatLogProps {
@@ -53,7 +54,15 @@ export const ChatLog: React.FC<ChatLogProps> = ({ messages }) => {
                                             ))}
                                         </MathJax>
                                     ) : (
-                                        displayText
+                                        msg.role === 'assistant' ? (
+                                            <div className="markdown-content">
+                                                <ReactMarkdown>
+                                                    {displayText}
+                                                </ReactMarkdown>
+                                            </div>
+                                        ) : (
+                                            displayText
+                                        )
                                     )}
                                 </div>
                             </div>
