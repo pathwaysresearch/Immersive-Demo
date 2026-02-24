@@ -112,7 +112,9 @@ export function AgentInterface() {
     const handleStart = useCallback(async () => {
         setError(null);
         try {
-            await navigator.mediaDevices.getUserMedia({ audio: true });
+            // Confirm permission and then immediately release the stream to avoid locking the mic
+            const tempStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            tempStream.getTracks().forEach(track => track.stop());
 
             let learnerContent = '';
             let moduleContent = '';
@@ -158,7 +160,7 @@ export function AgentInterface() {
             const message = err instanceof Error ? err.message : 'Failed to start conversation.';
             setError(message);
         }
-    }, [conversation, selectedLearner, selectedModule, getFormattedHistory, messages]);
+    }, [conversation, selectedLearner, selectedModule, getFormattedHistory, messages, sessionCount]);
 
     const handleChatSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
