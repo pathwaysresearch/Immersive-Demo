@@ -1,7 +1,7 @@
 import { MathJaxContext } from 'better-react-mathjax';
 import './App.css';
 import { AgentInterface } from './components/AgentInterface';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 function App() {
   return (
     

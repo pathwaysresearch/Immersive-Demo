@@ -134,7 +134,7 @@ export function AgentInterface() {
             tempStream.getTracks().forEach(track => track.stop());
 
             let learnerContent = '';
-            let moduleContent = '';
+
 
             if (selectedLearner) {
                 const content = learnerFiles[selectedLearner];
@@ -145,14 +145,7 @@ export function AgentInterface() {
                 }
             }
 
-            if (selectedModule) {
-                const content = moduleFiles[selectedModule];
-                if (content && typeof content === 'string') {
-                    moduleContent = content;
-                } else if (content && typeof content === 'object' && 'default' in content) {
-                    moduleContent = (content as any).default;
-                }
-            }
+
 
             // Determine greeting based on session count
             const currentSession = sessionCount + 1;
@@ -167,7 +160,6 @@ export function AgentInterface() {
                 connectionType: 'webrtc',
                 dynamicVariables: {
                     learner: learnerContent.trim(),
-                    // module: moduleContent.trim(),
                     history: getFormattedHistory(messages),
                     message: greeting
                 }
