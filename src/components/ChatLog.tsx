@@ -30,44 +30,58 @@ export const ChatLog: React.FC<ChatLogProps> = ({ messages }) => {
                         No messages yet. Start by speaking or typing.
                     </div>
                 ) : (
-                    messages.map((msg) => {
-                        const isBlackboardUpdate = msg.text.startsWith('[BLACKBOARD UPDATE]');
-                        const displayText = isBlackboardUpdate
-                            ? msg.text.replace('[BLACKBOARD UPDATE]', '').trim()
-                            : msg.text;
+                    messages
+                        .filter(msg => !(msg.role === 'assistant' && msg.type === 'audio')) // Hide agent audio
+                        .sort((a, b) => {
+                            const timeA = a.timestamp.getTime();
+                            const timeB = b.timestamp.getTime();
 
-                        return (
-                            <div key={msg.id} className={`chat-message ${msg.role} ${isBlackboardUpdate ? 'blackboard-msg' : ''}`}>
-                                <div className="message-header">
-                                    <span className="message-role">
-                                        {isBlackboardUpdate ? 'Blackboard' : (msg.role === 'user' ? 'You' : 'Agent')}
-                                    </span>
-                                    <span className="message-source">
-                                        {msg.type === 'audio' ? <Mic size={12} /> : <MessageSquare size={12} />}
-                                    </span>
-                                </div>
-                                <div className="message-content">
-                                    {isBlackboardUpdate ? (
-                                        <MathJax className="blackboard-render">
-                                            {displayText.split('\n').map((line, i) => (
-                                                <p key={i}>{line}</p>
-                                            ))}
-                                        </MathJax>
-                                    ) : (
-                                        msg.role === 'assistant' ? (
-                                            <div className="markdown-content">
-                                                <ReactMarkdown>
-                                                    {displayText}
-                                                </ReactMarkdown>
-                                            </div>
+                            if (Math.abs(timeA - timeB) < 50) { // Near-simultaneous logic
+                                // If one is user and other is assistant (or blackboard), user first
+                                if (a.role === 'user' && b.role === 'assistant') return -1;
+                                if (b.role === 'user' && a.role === 'assistant') return 1;
+                            }
+
+                            return timeA - timeB;
+                        })
+                        .map((msg) => {
+                            const isBlackboardUpdate = msg.text.startsWith('[BLACKBOARD UPDATE]');
+                            const displayText = isBlackboardUpdate
+                                ? msg.text.replace('[BLACKBOARD UPDATE]', '').trim()
+                                : msg.text;
+
+                            return (
+                                <div key={msg.id} className={`chat-message ${msg.role} ${isBlackboardUpdate ? 'blackboard-msg' : ''}`}>
+                                    <div className="message-header">
+                                        <span className="message-role">
+                                            {isBlackboardUpdate ? 'Blackboard' : (msg.role === 'user' ? 'You' : 'Agent')}
+                                        </span>
+                                        <span className="message-source">
+                                            {msg.type === 'audio' ? <Mic size={12} /> : <MessageSquare size={12} />}
+                                        </span>
+                                    </div>
+                                    <div className="message-content">
+                                        {isBlackboardUpdate ? (
+                                            <MathJax className="blackboard-render">
+                                                {displayText.split('\n').map((line, i) => (
+                                                    <p key={i}>{line}</p>
+                                                ))}
+                                            </MathJax>
                                         ) : (
-                                            displayText
-                                        )
-                                    )}
+                                            msg.role === 'assistant' ? (
+                                                <div className="markdown-content">
+                                                    <ReactMarkdown>
+                                                        {displayText}
+                                                    </ReactMarkdown>
+                                                </div>
+                                            ) : (
+                                                displayText
+                                            )
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })
+                            );
+                        })
                 )}
             </div>
         </div>
