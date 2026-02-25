@@ -164,7 +164,7 @@ export function AgentInterface() {
 
             await conversation.startSession({
                 agentId: AGENT_ID,
-                connectionType: 'websocket',
+                connectionType: 'webrtc',
                 dynamicVariables: {
                     learner: learnerContent.trim(),
                     // module: moduleContent.trim(),
