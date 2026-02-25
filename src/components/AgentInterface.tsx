@@ -76,7 +76,18 @@ export function AgentInterface() {
             const role: 'user' | 'assistant' = isUser ? 'user' : 'assistant';
 
             setMessages(prev => {
-                // De-duplication: check if same text and role were added very recently (within 5s)
+                // If it's a user audio transcript, try to update the last user audio message 
+                // if it's within a short logical window (5s). This keeps the timestamp of the START of speech.
+                if (role === 'user') {
+                    const lastMsg = prev[prev.length - 1];
+                    if (lastMsg && lastMsg.role === 'user' && lastMsg.type === 'audio' && (new Date().getTime() - lastMsg.timestamp.getTime() < 5000)) {
+                        return prev.map((m, idx) =>
+                            idx === prev.length - 1 ? { ...m, text } : m
+                        );
+                    }
+                }
+
+                // De-duplication for assistant or non-contiguous user messages
                 const isDuplicate = prev.some(m =>
                     m.text.trim() === text &&
                     m.role === role &&
@@ -157,7 +168,7 @@ export function AgentInterface() {
 
             await conversation.startSession({
                 agentId: AGENT_ID,
-                connectionType: 'webrtc',
+                connectionType: 'websocket',
                 dynamicVariables: {
                     learner: learnerContent.trim(),
                     history: getFormattedHistory(messages),

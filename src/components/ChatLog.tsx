@@ -31,7 +31,12 @@ export const ChatLog: React.FC<ChatLogProps> = ({ messages }) => {
                     </div>
                 ) : (
                     messages
-                        .filter(msg => !(msg.role === 'assistant' && msg.type === 'audio')) // Hide agent audio
+                        .filter(msg => {
+                            const isBlackboard = msg.text.startsWith('[BLACKBOARD UPDATE]');
+                            // Show if: NOT (assistant audio AND NOT blackboard)
+                            // i.e. hide only non-blackboard assistant audio
+                            return !(msg.role === 'assistant' && msg.type === 'audio' && !isBlackboard);
+                        })
                         .sort((a, b) => {
                             const timeA = a.timestamp.getTime();
                             const timeB = b.timestamp.getTime();
